@@ -1,1 +1,1 @@
-sha3_256 keccak hashing for PyPy using a C library through cffi bindings
+keccak sha3_256  hashing for PyPy using a C library through cffi bindings

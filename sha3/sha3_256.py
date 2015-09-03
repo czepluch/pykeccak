@@ -1,24 +1,20 @@
+import sys
 from cffi import FFI
-
-seed = ""
+import rlp
+from rlp.utils import decode_hex, encode_hex
 
 ffi = FFI()
-
-lib = ffi.dlopen("./libsha3.so")
+lib = ffi.dlopen("/home/czepluch/Dropbox/prgrms/ethereum/pypy_sha3/lib/libsha3.so")
 
 ffi.cdef('''
          int sha3_256(uint8_t*, size_t, uint8_t const*, size_t);
          ''')
-
-inpt = ffi.new("uint8_t[]", seed)
-outpt = ffi.new("uint8_t[]", 32)
+seed = ''
 output_length = 32
-
-sha3 = lib.sha3_256(outpt, output_length, inpt, len(inpt))
+inpt = ffi.new("uint8_t[]", str(seed))
+outpt = ffi.new("uint8_t[]", output_length)
+lib.sha3_256(outpt, output_length, inpt, len(seed))
 
 buf = ffi.buffer(outpt, output_length)
-
-j = buf[:]
-
-print(j)
-lib.free(buf[:])
+printbuf = buf[:]
+print(printbuf.encode('hex'))
