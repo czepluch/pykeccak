@@ -1,9 +1,11 @@
 import os
+import glob
 from _keccak import ffi
 
 # Use relative path to generated shared object
 dir = os.path.dirname(__file__)
-filename = os.path.join(dir, 'build/lib.linux-x86_64-2.7/pykeccak.pypy-26.so')
+filepath = glob.glob('build/*/*.so')
+filename = os.path.join(dir, filepath[0])
 # Open the shared object to use with ffi
 lib = ffi.dlopen(filename)
 
