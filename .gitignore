@@ -24,7 +24,7 @@ var/
 .venv
 
 # Generated sha3.py file
-#_sha3.py
+_sha3.py
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
