@@ -13,4 +13,7 @@ setup(name="pypy-sha3",
       author_email="j.czepluch@gmail.com",
       url="https://github.com/czepluch/pypy_sha3",
       ext_modules=[pypy_sha3],
+      # setup_requires=["cffi>=1.0.0"],
+      # cffi_modules=["sha3_build.py:ffi"],
+      # install_requires=["cffi>=1.0.0"],
       )
