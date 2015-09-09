@@ -3,7 +3,7 @@ from _sha3 import ffi
 
 # Use relative path to generated shared object
 dir = os.path.dirname(__file__)
-filename = os.path.join(dir, 'build/lib.linux-x86_64-2.7/pypy-sha3.pypy-26.so')
+filename = os.path.join(dir, '../build/lib.linux-x86_64-2.7/pypy-sha3.pypy-26.so')
 # Open the shared object to use with ffi
 lib = ffi.dlopen(filename)
 
@@ -20,5 +20,5 @@ def sha3_256(seed):
     buf = ffi.buffer(outpt, output_length)
     return buf[:]
 
-# bf = sha3_256('')
-# print(bf.encode('hex'))
+bf = sha3_256('')
+print(bf.encode('hex'))
