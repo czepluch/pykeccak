@@ -1,9 +1,9 @@
 import os
-from _sha3 import ffi
+from _keccak import ffi
 
 # Use relative path to generated shared object
 dir = os.path.dirname(__file__)
-filename = os.path.join(dir, 'build/lib.linux-x86_64-2.7/pypy-sha3.pypy-26.so')
+filename = os.path.join(dir, 'build/lib.linux-x86_64-2.7/pykeccak.pypy-26.so')
 # Open the shared object to use with ffi
 lib = ffi.dlopen(filename)
 

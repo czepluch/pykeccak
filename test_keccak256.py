@@ -1,4 +1,4 @@
-from sha3_256 import sha3_256
+from keccak import sha3_256
 
 def sha3(seed):
     return sha3_256(seed).encode('hex')
