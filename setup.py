@@ -25,6 +25,4 @@ setup(name="pykeccak",
       author_email="j.czepluch@gmail.com",
       url="https://github.com/czepluch/pykeccak",
       ext_modules=[pykeccak],
-      setup_requires=["cffi>=1.0.0"],
-      install_requires=["cffi>=1.0.0"],
       )
