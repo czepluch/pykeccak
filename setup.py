@@ -1,4 +1,5 @@
 from distutils.core import setup, Extension
+# from setuptools import setup, find_packages
 
 pypy_sha3 = Extension('pypy-sha3',
                       sources=['lib/sha3.c'],
@@ -11,5 +12,5 @@ setup(name="pypy-sha3",
       author="Jacob Stenum Czepluch",
       author_email="j.czepluch@gmail.com",
       url="https://github.com/czepluch/pypy_sha3",
-      ext_modules=[pypy_sha3]
+      ext_modules=[pypy_sha3],
       )
