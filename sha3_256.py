@@ -15,5 +15,3 @@ def sha3_256(seed):
     buf = ffi.buffer(outpt, output_length)
     return buf[:]
 
-printbuf = sha3_256('')
-print(printbuf.encode('hex'))
