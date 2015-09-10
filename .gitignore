@@ -22,6 +22,8 @@ var/
 .installed.cfg
 *.egg
 .venv
+.pypy3/
+.py27/
 
 # Generated sha3.py file
 _keccak.py

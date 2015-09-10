@@ -1,5 +1,4 @@
 from setuptools import setup, Extension
-from cffi import FFI
 
 pykeccak = Extension('pykeccak',
                       sources=['lib/sha3.c'],
@@ -20,6 +19,7 @@ setup(name="pykeccak",
       )
 
 # cffi specific setup.
+from cffi import FFI
 ffi = FFI()
 
 ffi.set_source("_keccak", None)
