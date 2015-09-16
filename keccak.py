@@ -4,7 +4,7 @@ from _keccak import ffi
 
 # Use relative path to generated shared object
 dir = os.path.dirname(__file__)
-filepath = glob.glob('build/*/*.so')
+filepath = glob.glob(os.path.join(dir, 'build', '*', '*.so'))
 filename = os.path.join(dir, filepath[0])
 # Open the shared object to use with ffi
 lib = ffi.dlopen(filename)
