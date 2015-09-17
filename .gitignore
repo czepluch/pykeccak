@@ -26,7 +26,7 @@ var/
 .py27/
 
 # Generated sha3.py file
-_keccak.py
+keccak/_keccak.py
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
