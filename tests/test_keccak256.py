@@ -1,10 +1,13 @@
 from keccak import sha3_256
 
+
 def sha3(seed):
     return sha3_256(seed).encode('hex')
 
+
 def test_empty_string():
     assert sha3('') == 'c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470'
+
 
 def test_short_string():
     """test for string `hello`"""

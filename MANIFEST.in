@@ -1,1 +1,2 @@
 include lib/*.h
+include _cffi_build/*.py
