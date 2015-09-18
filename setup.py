@@ -10,7 +10,7 @@ sha3 = Extension(
 
 setup(
     name="pykeccak",
-    version='0.1.9',
+    version='0.2.0',
     description="Keccak 256 hashing for PyPy2",
     author="Jacob Stenum Czepluch",
     author_email="j.czepluch@gmail.com",
