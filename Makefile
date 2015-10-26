@@ -4,6 +4,8 @@ clean-build:
 	rm -fr build/
 	rm -fr dist/
 	rm -fr *.egg-info
+	rm -rf keccak/_keccak.py
+	rm -rf keccak/sha3.pypy-26*
 
 clean-pyc:
 	find . -name '*.pyc' -exec rm -f {} +
